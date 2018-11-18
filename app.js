@@ -3,11 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const keys = require('./config/keys');
+const mongoose = require('mongoose');
+
+mongoose.connect(keys.mongoURI);
+require('./models/Question');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var questionsRouter = require('./routes/questions');
-
 var app = express();
 
 // view engine setup
