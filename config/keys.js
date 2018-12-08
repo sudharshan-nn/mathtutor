@@ -1,7 +1,10 @@
 //Dont commit it
 module.exports = {
     mongoURI : 'mongodb://mathtutor_read:mathtutor_read1@ds241723.mlab.com:41723/mathtutor',
-    awsUrl : "https://18.222.251.97:3000",
-    questionsCount: 100
+    awsUrl : "https://52.205.150.250:3000", // AWS server address which will be used to to create quick responses
+    questionsCount: 100, // number of questions per quiz
+    problems: ["problem_306", "problem_809", "problem_808", "problem_803", "problem_802", "problem_801", "problem_800", "problem_807", "problem_806", "problem_393", "problem_392", "problem_390", "problem_397", "problem_396", "problem_395", "problem_394", "problem_398", "problem_810", "problem_380", "problem_428", "problem_382", "problem_259", "problem_384", "problem_385", "problem_386", "problem_387", "problem_388", "problem_420", "problem_423", "problem_220", "problem_425", "problem_257", "problem_427", "problem_426", "problem_251", "problem_325", "problem_444", "problem_381", "problem_383", "problem_438", "problem_439", "problem_227", "problem_431", "problem_457", "problem_421", "problem_389", "problem_832", "problem_830", "problem_422", "problem_836", "problem_834", "problem_835", "problem_838", "problem_839", "problem_238", "problem_236", "problem_232", "problem_345", "problem_346", "problem_347", "problem_297", "problem_294", "problem_349", "problem_462", "problem_847", "problem_846", "problem_845", "problem_844", "problem_843", "problem_842", "problem_841", "problem_840", "problem_849", "problem_848", "problem_202", "problem_205", "problem_206", "problem_209", "problem_208", "problem_472", "problem_262", "problem_267", "problem_266", "problem_831", "problem_850", "problem_851", "problem_852", "problem_407", "problem_406", "problem_405", "problem_402", "problem_401", "problem_400", "problem_409", "problem_379", "problem_378", "problem_370", "problem_373", "problem_372", "problem_375", "problem_374", "problem_377", "problem_376", "problem_414", "problem_416", "problem_410", "problem_412", "problem_315", "problem_366", "problem_367", "problem_364", "problem_363"],
+    reactionKeyTutorIntro: 'tutorIntro', // intro video reaction key
+    cloudinaryUrl: "http://res.cloudinary.com/dcwidimn9/image/upload/" // Question image csn base url
 }
   

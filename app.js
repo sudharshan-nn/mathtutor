@@ -5,13 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const keys = require('./config/keys');
 const mongoose = require('mongoose');
+const bodyParser = require("body-parser");
 
 mongoose.connect(keys.mongoURI);
 require('./models/Question');
+require('./models/Reaction');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var questionsRouter = require('./routes/questions');
+var reactionsRouter = require('./routes/reactions');
 var app = express();
 
 // view engine setup
@@ -24,10 +27,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
+// app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/questions', questionsRouter);
+app.use('/reactions', reactionsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
