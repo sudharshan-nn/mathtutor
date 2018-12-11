@@ -33,7 +33,9 @@ Move to inbound tab and edit
 
 add
 
-Custom TCP Rule    TCP    3000     0.0.0.0/0
-Custom TCP Rule    TCP    3000     	::/0
-HTTPS              TCP    443      0.0.0.0/0
-HTTPS              TCP    443     	::/0
+|Type               |Protocal   |Port Range |Source     |
+|-------------------|-----------|-----------|-----------|
+|Custom TCP Rule    |TCP        |3000       |0.0.0.0/0  |
+|Custom TCP Rule    |TCP        |3000     	|::/0       |
+|HTTPS              |TCP        |443        |0.0.0.0/0  |
+|HTTPS              |TCP        |443     	|::/0       |
